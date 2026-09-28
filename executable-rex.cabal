@@ -1,0 +1,108 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           executable-rex
+version:        0.1.0.0
+synopsis:       A lexical analyzer generator for multiple target languages
+description:    Please see the README on GitHub at <https://github.com/wsiduka/rex#readme>
+category:       Development
+homepage:       https://github.com/wsiduka/rex#readme
+bug-reports:    https://github.com/wsiduka/rex/issues
+author:         WAKAMATU, Siduka
+maintainer:     example@example.com
+copyright:      (c) 2021 WAKAMATU, Siduka
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+data-files:
+    templates/C/Common.c
+    templates/Haskell/Jump.hs
+
+source-repository head
+  type: git
+  location: https://github.com/wsiduka/rex
+
+library
+  exposed-modules:
+      Rex.Automata.DFA
+      Rex.Automata.DFAMin
+      Rex.Automata.NFA
+      Rex.Codec.Types
+      Rex.Codec.UTF16
+      Rex.Codec.UTF32
+      Rex.Codec.UTF8
+      Rex.Data.Alpha
+      Rex.Data.Alpha.UTF16
+      Rex.Data.Alpha.UTF32
+      Rex.Data.Alpha.UTF8
+      Rex.Data.AlphaSet
+      Rex.Data.CharSet
+      Rex.Data.RangeSet
+      Rex.Data.Regex
+      Rex.Data.Regex.Surrogate
+      Rex.Data.Regex.UTF16
+      Rex.Data.Regex.UTF32
+      Rex.Data.Regex.UTF8
+      Rex.Module
+      Rex.Output.C
+      Rex.Output.C.Jump
+      Rex.Output.Dot
+      Rex.Output.Haskell
+      Rex.Output.Haskell.Jump
+      Rex.Output.Monad
+      Rex.Syntax
+      Rex.Syntax.Parser.Lexer
+      Rex.Syntax.Parser.Parser
+      Rex.Syntax.SrcLoc
+  other-modules:
+      Paths_executable_rex
+  hs-source-dirs:
+      src
+  ghc-options: -O2
+  build-tools:
+      alex
+    , happy
+  build-depends:
+      array
+    , base >=4.7 && <5
+    , containers
+    , filepath
+  default-language: Haskell2010
+
+executable rex
+  main-is: Main.hs
+  other-modules:
+      Paths_executable_rex
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      array
+    , base >=4.7 && <5
+    , containers
+    , executable-rex
+    , filepath
+  default-language: Haskell2010
+
+test-suite range-set-spec
+  type: exitcode-stdio-1.0
+  main-is: RangeSetSpec.hs
+  other-modules:
+      Paths_executable_rex
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , array
+    , base >=4.7 && <5
+    , containers
+    , executable-rex
+    , filepath
+  default-language: Haskell2010

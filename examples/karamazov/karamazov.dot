@@ -1,0 +1,38 @@
+digraph DFA {
+    graph [
+        charset = "UTF-8"
+        layout = dot
+        rankdir = LR
+    ];
+    node [
+        shape = "circle"
+    ];
+    1 [
+        shape = "doublecircle";
+    ];
+    -1 [shape = point];
+    0;
+    -1 -> 0;
+    0;
+    6;
+    0 -> 6 [label = "[65]"];
+    2;
+    1;
+    2 -> 1 [label = "[97]"];
+    3;
+    2;
+    3 -> 2 [label = "[104]"];
+    4;
+    3;
+    4 -> 3 [label = "[115]"];
+    5;
+    4;
+    5 -> 4 [label = "[111]"];
+    6;
+    7;
+    6 -> 7 [label = "[108]"];
+    7;
+    5;
+    7 -> 5 [label = "[121]"];
+}
+

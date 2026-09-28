@@ -1,0 +1,57 @@
+name:                executable-rex
+version:             0.1.0.0
+github:              wsiduka/rex
+license:             BSD3
+author:              WAKAMATU, Siduka
+maintainer:          "example@example.com"
+copyright:           (c) 2021 WAKAMATU, Siduka
+synopsis:            A lexical analyzer generator for multiple target languages
+category:            Development
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+data-files:
+- templates/C/Common.c
+- templates/Haskell/Jump.hs
+
+description:
+  Please see the README on GitHub at <https://github.com/wsiduka/rex#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- array
+- containers
+- filepath
+
+library:
+  source-dirs: src
+  build-tools:
+  - alex
+  - happy
+  ghc-options:
+  - -O2
+
+executables:
+  rex:
+    main:            Main.hs
+    source-dirs:     app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - executable-rex
+
+tests:
+  range-set-spec:
+    main:            RangeSetSpec.hs
+    source-dirs:     test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - executable-rex
+    - QuickCheck
