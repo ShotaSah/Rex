@@ -20,23 +20,24 @@ Rex currently supports only Haskell, with support for additional languages plann
 - Graphviz (optional, for DFA visualization)
 
 
-## Build
+## Install
 
 Clone the repository and run:
 
-    stack build
+    stack install
 
 
 ## Usage
 
 To generate Haskell source code from a lexical specification file, run:
 
-    stack exec rex -- -Ths yourfile.rex
+    rex -Ths inputfile.rex
 
 To visualize the DFA and export it as a PDF:
 
-    stack exec rex -- -Tdot yourfile.rex
-    dot -Tpdf yourfile.dot -o output.pdf
+    rex -Tdot inputfile.rex
+    dot -Tpdf inputfile.dot -o outputfile.pdf
+
 
 ## Examples
 
