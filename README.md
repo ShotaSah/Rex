@@ -20,7 +20,7 @@ Rex currently supports only Haskell, with support for additional languages plann
 - Graphviz (optional, for DFA visualization)
 
 
-## Install
+## Installation
 
 Clone the repository and run:
 
