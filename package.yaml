@@ -1,11 +1,10 @@
 name:                executable-rex
 version:             0.1.0.0
-github:              wsiduka/rex
+github:              ShotaSah/Rex
 license:             BSD3
-author:              WAKAMATU, Siduka
-maintainer:          "example@example.com"
-copyright:           (c) 2021 WAKAMATU, Siduka
-synopsis:            A lexical analyzer generator for multiple target languages
+author:              Shota Isokawa
+copyright:           (c) 2026 Shota Isokawa
+synopsis:            A lexical analyzer generator for multiple languages
 category:            Development
 
 extra-source-files:

@@ -1,19 +1,19 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.34.4.
+-- This file has been generated from package.yaml by hpack version 0.39.6.
 --
 -- see: https://github.com/sol/hpack
 
 name:           executable-rex
 version:        0.1.0.0
-synopsis:       A lexical analyzer generator for multiple target languages
+synopsis:       A lexical analyzer generator for multiple languages
 description:    Please see the README on GitHub at <https://github.com/wsiduka/rex#readme>
 category:       Development
-homepage:       https://github.com/wsiduka/rex#readme
-bug-reports:    https://github.com/wsiduka/rex/issues
-author:         WAKAMATU, Siduka
-maintainer:     example@example.com
-copyright:      (c) 2021 WAKAMATU, Siduka
+homepage:       https://github.com/ShotaSah/Rex#readme
+bug-reports:    https://github.com/ShotaSah/Rex/issues
+author:         Shota Isokawa
+maintainer:     Shota Isokawa
+copyright:      (c) 2026 Shota Isokawa
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
@@ -26,7 +26,7 @@ data-files:
 
 source-repository head
   type: git
-  location: https://github.com/wsiduka/rex
+  location: https://github.com/ShotaSah/Rex
 
 library
   exposed-modules:
